@@ -4,6 +4,7 @@ const Form = () => {
   let [formData, setFormData] = useState({
     name: "",
     description: "",
+    ID: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +31,14 @@ const Form = () => {
           onChange={handleChange}
           value={formData.description}
           name="description"
+        />
+        <input
+          className="mb-4 p-2 border border-gray-300 rounded"
+          type="text"
+          value={formData.ID}
+          placeholder="this is gonna be the id "
+          onChange={handleChange}
+          name="ID"
         />
       </form>
     </section>
