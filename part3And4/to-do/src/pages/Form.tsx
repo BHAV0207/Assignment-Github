@@ -5,6 +5,8 @@ const Form = () => {
     name: "",
     description: "",
     ID: "",
+    UUID: "",
+    itemHash: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +41,22 @@ const Form = () => {
           placeholder="this is gonna be the id "
           onChange={handleChange}
           name="ID"
+        />
+        <input
+          className="mb-4 p-2 border border-gray-300 rounded"
+          type="text"
+          value={formData.UUID}
+          placeholder="this is gonna be the uuid"
+          onChange={handleChange}
+          name="UUID"
+        />
+        <input
+          className="mb-4 p-2 border border-gray-300 rounded"
+          type="text"
+          value={formData.itemHash}
+          placeholder="this is gonna be the itemHash"
+          onChange={handleChange}
+          name="itemHash"
         />
       </form>
     </section>
